@@ -78,10 +78,10 @@ const AppContent = () => {
             <Route path="/entry-video" element={isAuthenticated ? <EntryVideoPage /> : <Navigate to="/login" />} />
             <Route path="/profile" element={isAuthenticated ? <UserProfile user={user} updateUser={updateUser} /> : <Navigate to="/login" />} />
             <Route path="/leaderboard" element={isAuthenticated ? <Leaderboard /> : <Navigate to="/login" />} />
-            <Route path="/games" element={isAuthenticated ? <Games /> : <Navigate to="/login" />} />
-            <Route path="/tictactoe" element={isAuthenticated ? <TicTacToe /> : <Navigate to="/login" />} />
-            <Route path="/tetris" element={isAuthenticated ? <Tetris /> : <Navigate to="/login" />} />
-            <Route path="/2048" element={isAuthenticated ? <Game2048 /> : <Navigate to="/login" />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/tictactoe" element={<TicTacToe />} />
+            <Route path="/tetris" element={<Tetris />} />
+            <Route path="/2048" element={<Game2048 />} />
             <Route path="/" element={<Dashboard />} />
             <Route path="/home" element={<Home />} />
             <Route path="/about-us" element={<AboutUs />} />
